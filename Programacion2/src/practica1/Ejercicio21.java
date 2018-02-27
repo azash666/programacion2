@@ -16,6 +16,7 @@ public class Ejercicio21 {
 			if(i<=vector[j]) return j;
 		}
 		return vector.length;
+		
 	}
 
 	
