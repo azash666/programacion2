@@ -3,7 +3,6 @@ package practica1;
 import java.util.Random;
 
 public class Ejercicio23 {
-	private static int annoActual = 2018;
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
