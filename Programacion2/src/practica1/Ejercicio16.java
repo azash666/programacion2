@@ -10,7 +10,7 @@ public class Ejercicio16 {
 		System.out.println("vector, 5 --> "+ contarOlasDeFrio(vector, 5));
 	}
 
-	private static int contarOlasDeFrio(double[] vector, int i) {
+	public static int contarOlasDeFrio(double[] vector, int i) {
 		// TODO Auto-generated method stub
 		int nOlas = 0;
 		int contar=0;
@@ -32,7 +32,7 @@ public class Ejercicio16 {
 		return nOlas;
 	}
 
-	private static double[] aletoriza(int n) {
+	public static double[] aletoriza(int n) {
 		// TODO Auto-generated method stub
 		Random rand = new Random();
 		double[] devolver = new double[n];
@@ -41,13 +41,13 @@ public class Ejercicio16 {
 			int j = rand.nextInt(10);
 			for(int k=0; k<j && i<n; k++) {
 				devolver[i]=rand.nextDouble()*20;
-				System.out.println(i+" -> "+ devolver[i]);
+				//System.out.println(i+" -> "+ devolver[i]);
 				i++;
 			}
 			j = rand.nextInt(10);
 			for(int k=0; k<j && i<n; k++) {
 				devolver[i]=rand.nextDouble()*(-20);
-				System.out.println("         "+i+" -> "+ devolver[i]);
+				//System.out.println("         "+i+" -> "+ devolver[i]);
 				i++;
 			}
 		}
