@@ -6,8 +6,10 @@ import java.util.Scanner;
 
 public class Ejercicio24 {
 	public static void main(String[] args) {
-		char[][] solucion = crearMatrizResultados(equipos, fichero)
-		for(int i=0; i<3)
+		//char[][] solucion = crearMatrizResultados(equipos, fichero)
+		for(int i=0; i<3;i++) {
+			
+		}
 	}
 	
 	public static char[][] crearMatrizResultados(String[] equipos, String fichero){
