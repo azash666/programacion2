@@ -54,7 +54,7 @@ public class Restaurante {
 		while(entrada.hasNextDouble()) {
 			Punto puntoAux = new Punto(entrada.nextDouble(),entrada.nextDouble());
 			int puntuacionAux = entrada.nextInt();
-			String nombreAux = entrada.next();
+			String nombreAux = entrada.nextLine().trim();
 			rest[i]=new Restaurante(nombreAux, puntoAux, puntuacionAux);
 			i++;
 		}
