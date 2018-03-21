@@ -2,8 +2,6 @@ package practica2.ejercicio03;
 
 import java.util.Scanner;
 
-import org.omg.Messaging.SyncScopeHelper;
-
 import practica2.ejercicio01.Punto;
 import practica2.ejercicio02.Restaurante;
 
@@ -17,6 +15,7 @@ public class ejercicio03 {
 		x = teclado.nextDouble();
 		System.out.print("Coordenada Y: ");
 		y = teclado.nextDouble();
+		teclado.close();
 		Restaurante aux = restauranteMásPróximo(Restaurante.leeRestaurantes("restaurantes.txt"), new Punto(x,y));
 		System.out.println("El restaurante más cercano a su posición es "+aux.getNombre()+", situado en el punto "+aux.getPosición());
 	}
