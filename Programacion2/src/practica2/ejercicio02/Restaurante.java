@@ -12,11 +12,11 @@ public class Restaurante {
 	private Punto punto;
 	private int puntuacion;
 
-	public Restaurante(String string, Punto punto, int i) {
+	public Restaurante(String nombre, Punto posicion, int valoracion) {
 		// TODO Auto-generated constructor stub
-		this.nombre = string;
-		this.punto = punto;
-		this.puntuacion=i;
+		this.nombre = nombre;
+		this.punto = posicion;
+		this.puntuacion=valoracion;
 	}
 
 	public String getNombre() {
@@ -24,12 +24,12 @@ public class Restaurante {
 		return nombre;
 	}
 
-	public Punto getPunto() {
+	public Punto getPosición() {
 		// TODO Auto-generated method stub
 		return punto;
 	}
 
-	public int getValoracion() {
+	public int getValoración() {
 		// TODO Auto-generated method stub
 		return puntuacion;
 	}
@@ -50,7 +50,15 @@ public class Restaurante {
 			e.printStackTrace();
 		}
 		Restaurante[] rest = new Restaurante[Integer.parseInt(entrada.nextLine())];
-		return null;
+		int i=0;
+		while(entrada.hasNextDouble()) {
+			Punto puntoAux = new Punto(entrada.nextDouble(),entrada.nextDouble());
+			int puntuacionAux = entrada.nextInt();
+			String nombreAux = entrada.next();
+			rest[i]=new Restaurante(nombreAux, puntoAux, puntuacionAux);
+			i++;
+		}
+		return rest;
 	}
 	
 	
