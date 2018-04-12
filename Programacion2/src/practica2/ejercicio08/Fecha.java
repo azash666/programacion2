@@ -9,11 +9,13 @@ public class Fecha {
 	private int mes;
 	private int año;
 	
-	public Fecha(int día, int mes, int año) {
+	public Fecha(int día, int mes, int año) throws ExcepcionFechaInvalida {
 		// TODO Auto-generated constructor stub
+		if( mes<1 || mes>12 || día<1 || día>Fecha.díasMes(mes, año)) throw new ExcepcionFechaInvalida();
 		this.día = día;
 		this.mes = mes;
 		this.año = año;
+		
 	}
 
 	public Fecha(Fecha fecha) {
@@ -81,8 +83,9 @@ public class Fecha {
 		return false;
 	}
 
-	public static int díasMes(int mes, int año) {
+	public static int díasMes(int mes, int año) throws ExcepcionFechaInvalida {
 		// TODO Auto-generated method stub
+		if( mes<1 || mes>12) throw new ExcepcionFechaInvalida();
 		switch(mes) {
 		case 4:
 		case 6:
@@ -103,11 +106,17 @@ public class Fecha {
 		int día = calendario.get(Calendar.DAY_OF_MONTH);
 		int mes = calendario.get(Calendar.MONTH) + 1;
 		int año = calendario.get(Calendar.YEAR);
-		Fecha salida = new Fecha(día, mes, año);
+		Fecha salida = null;
+		try {
+			salida = new Fecha(día, mes, año);
+		} catch (ExcepcionFechaInvalida e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return salida;
 	}
 
-	public Fecha díaSiguiente() {
+	public Fecha díaSiguiente() throws ExcepcionFechaInvalida {
 		// TODO Auto-generated method stub
 		int día= this.día, mes = this.mes, año=this.año;
 		if (this.día<Fecha.díasMes(this.mes, this.año)) {
