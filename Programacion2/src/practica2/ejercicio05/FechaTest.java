@@ -6,7 +6,6 @@ public class FechaTest {
 		System.out.println("Probando el constructor");
 		Fecha fecha1 = new Fecha(21,3,2018);
 		Fecha fecha2 = new Fecha(31,01,2000);
-<<<<<<< HEAD
 		Fecha fecha2menos1día = new Fecha(30,01,2000);
 		Fecha fecha1mas1mes = new Fecha(21,04,2018);
 		Fecha fechaBisiesta = new Fecha(29,01,2016);
@@ -64,12 +63,6 @@ public class FechaTest {
 		System.out.println("prueba.díaSiguiente(): "+(prueba.díaSiguiente()));
 		for(int i=0; i<1000; i++) 
 		System.out.println(i+" prueba=prueba.díaSiguiente(): "+(prueba=prueba.díaSiguiente()));
-=======
-		Fecha fechaBisiesta = new Fecha(29,01,2016);
 		
-		Fecha fecha3 = new Fecha(fecha1);
-		Fecha fecha4 = new Fecha(fecha2);
-		Fecha fechaBisiesta2 = new Fecha(fechaBisiesta);
->>>>>>> refs/remotes/origin/master
 	}
 }
