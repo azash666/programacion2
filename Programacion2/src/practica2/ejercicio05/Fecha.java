@@ -23,17 +23,17 @@ public class Fecha {
 		this.año = fecha.getAño();
 	}
 
-	private int getAño() {
+	public int getAño() {
 		// TODO Auto-generated method stub
 		return this.año;
 	}
 
-	private int getMes() {
+	public int getMes() {
 		// TODO Auto-generated method stub
 		return this.mes;
 	}
 
-	private int getDía() {
+	public int getDía() {
 		// TODO Auto-generated method stub
 		return this.día;
 	}
