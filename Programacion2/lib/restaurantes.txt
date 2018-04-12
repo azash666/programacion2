@@ -1,0 +1,11 @@
+10
+ 1  1   2 el Bar de Moe
+ 3 10   3 Restaurante de Sanji
+20  3   5 El Crustaceo Crujiente
+25  5   3 Cantina de Ciencias
+22 19   4 Lo que antes era la pizzería del ágora
+ 2 15   1 R06
+15 15   5 R07
+22 19   3 R08
+20 18   3 R09
+10 22   2 R10

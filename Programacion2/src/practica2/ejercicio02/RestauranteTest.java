@@ -25,12 +25,12 @@ public class RestauranteTest {
 
 		System.out.println("\nProbando getPunto");
 		for(int i=0; i<restaurantes.length; i++) {
-			System.out.println("Restaurante nº "+i+" se encuentra en "+restaurantes[i].getPunto());
+			System.out.println("Restaurante nº "+i+" se encuentra en "+restaurantes[i].getPosición());
 		}
 
 		System.out.println("\nProbando getValoracion");
 		for(int i=0; i<restaurantes.length; i++) {
-			System.out.println("Restaurante nº "+i+" esta valorado como "+restaurantes[i].getValoracion());
+			System.out.println("Restaurante nº "+i+" esta valorado como "+restaurantes[i].getValoración());
 		}
 
 		System.out.println("\nProbando distancia");
@@ -40,6 +40,27 @@ public class RestauranteTest {
 		
 		System.out.println("\nProbando leeRestaurantes");
 		restaurantes = Restaurante.leeRestaurantes("restaurantes.txt");
+		System.out.println("Creado un vector de longitud "+restaurantes.length);
+
+		System.out.println("\nProbando getNombre del leeRestaurantes");
+		for(int i=0; i<restaurantes.length; i++) {
+			System.out.println("Restaurante nº "+i+" se llama "+restaurantes[i].getNombre());
+		}
+
+		System.out.println("\nProbando getPunto del leeRestaurantes");
+		for(int i=0; i<restaurantes.length; i++) {
+			System.out.println("Restaurante nº "+i+" se encuentra en "+restaurantes[i].getPosición());
+		}
+
+		System.out.println("\nProbando getValoracion del leeRestaurantes");
+		for(int i=0; i<restaurantes.length; i++) {
+			System.out.println("Restaurante nº "+i+" esta valorado como "+restaurantes[i].getValoración());
+		}
+
+		System.out.println("\nProbando distancia del leeRestaurantes");
+		for(int i=0; i<restaurantes.length; i++) {
+			System.out.println("Restaurante nº "+i+" está a "+restaurantes[i].distancia(new Punto(1,1))+" del punto (1, 1)");
+		}
 	}
 
 }
